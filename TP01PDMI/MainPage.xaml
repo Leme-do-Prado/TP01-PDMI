@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TP01PDMI.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            
+            <Label
+                Text="Aplicação Teste"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Entry x:Name="IdEntry"
+                   Placeholder="Insira ID" 
+                   Completed="OnOKClicked"
+                   TextTransform="Uppercase"/>
+
+            <Entry x:Name="PassEntry"
+                    Placeholder="Insira senha"
+                   Completed="OnOKClicked"
+                   IsPassword="true" />
+
+            <Button
+                x:Name="OkBtn"
+                Text="OK"
+                SemanticProperties.Hint="Valida credenciais"
+                Clicked="OnOKClicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="CleanBtn"
+                Text="LIMPA"
+                SemanticProperties.Hint="Limpa credenciais"
+                Clicked="OnCleanClicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="CreditsBtn"
+                Text="CREDITS"
+                SemanticProperties.Hint="Exibe creditos"
+                Clicked="OnCreditsClicked"
+                HorizontalOptions="Center" />
+
+            <Label x:Name="CreditsLabel"
+                Text=""
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Exibe creditos"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Label x:Name="labelValida"
+                   Text=""
+                   SemanticProperties.Description="Exibe creditos"
+                   FontSize="18"
+                   HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
